@@ -10,27 +10,39 @@ h1 {
     color: white
 }
 img {
-    width: 256px;
+    max-width: 256px;
     border-radius: 5px;
 }
 
-.top {
+.top, .middle, .bottom{
     display: flex;
-    gap: 2rem;
+    flex-wrap: nowrap;
     border: solid thin white;
+    gap: 1rem;
 }
 
-.middle {
-    border: solid thin white;
-}
-
-.bottom {
-    border: solid thin white;
-}
 
 .albums {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;;
     gap: 2rem;
-    border: thick solid red;
+}
+
+#a1 {
+    border: solid thin white
+}
+
+#a2 {
+    border: solid thin red
+}
+
+.album-card {
+    flex: 0 0 calc(50% - 0.5rem);
+    box-sizing: border-box;
+}
+
+.album-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;;
 }
