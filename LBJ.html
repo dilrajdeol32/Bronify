@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bronify</title>
+    <link rel="stylesheet" href="LBJstyle.css">
+    <script src="LBJscript.js"></script>
+</head>
+<body>
+    <img src="album_covers/gnx.jpg" alt="LBJ">
+
+    <div class="info">
+        <p id = "album-tag">Album</p>
+        <h1 id = "album-title">LBJ</h1>
+        <p id = "artist">By Lebron James</p>
+        <p id = "num-of-songs">12 songs</p>
+        <button id = "play" onclick="playAlbum()" >Play Album</button>
+        <button id = "shuffle">Shuffle Play</button>
+    </div>
+
+    <div class="tracklist">
+        <div class="heading">
+            <p id = "hashtag">#</p>
+            <p id = "title-tag">Title</p>
+            <p id = "time-tag">Time</p>
+        </div>
+
+        <div class="tracks">
+            <div id="first">
+                <p class = "numbers">1</p>
+                <div class="song-info">
+                    <p class = "song-name" id = "track1">Track 1</p>
+                    <p class="song-artist">Lebron James</p>
+                </div>
+                <p class = "time">3:04</p>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-player" src="audio/lbj-track-01.mp3" preload="metadata"></audio>
+</body>
+</html>

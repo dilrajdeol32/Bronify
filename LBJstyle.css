@@ -1,0 +1,79 @@
+body {
+    background-color: black;
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    color: white;
+
+}
+
+ol {
+    color: white;
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    
+    margin: 0px;
+}
+
+
+button {
+    background-color: green;
+    width: 150px;
+    height: 50px;
+    border-radius: 25%;
+    border: none;
+    cursor: pointer;
+
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(0.95);   /* 95 % of original size */
+}
+
+.heading {
+    display: flex;
+    padding: 15px;
+    border-bottom: solid thin white;
+}
+
+
+#hashtag {
+    flex-basis: 10%;
+}
+#title-tag {
+    flex-basis: 70%;
+}
+
+#first {
+    padding: 15px;
+    display: flex;
+    max-height: 50px;
+    align-items: start;
+
+}
+
+.numbers {
+    flex-basis: 10%;
+
+}
+
+.song-info {
+    flex-basis: 70%;
+
+}
+
+.song-artist {
+    font-size: 0.8rem;;
+}
+.time {
+}
+

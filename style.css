@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: white;
+}
+
+.album-name, .artist-name {
+    color: white
+}
+img {
+    width: 256px;
+    border-radius: 5px;
+}
+
+.top {
+    display: flex;
+    gap: 2rem;
+    border: solid thin white;
+}
+
+.middle {
+    border: solid thin white;
+}
+
+.bottom {
+    border: solid thin white;
+}
+
+.albums {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border: thick solid red;
+}
