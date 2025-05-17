@@ -1,26 +1,22 @@
 body {
     background-color: black;
+    font-size: 16px;
 }
 
-h1 {
+h1, h3 {
     color: white;
 }
 
 .album-name, .artist-name {
     color: white
 }
-img {
-    max-width: 256px;
-    border-radius: 5px;
-}
+
 
 .top, .middle, .bottom{
     display: flex;
     flex-wrap: nowrap;
-    border: solid thin white;
     gap: 1rem;
 }
-
 
 .albums {
     display: flex;
@@ -28,21 +24,32 @@ img {
     gap: 2rem;
 }
 
-#a1 {
-    border: solid thin white
-}
-
-#a2 {
-    border: solid thin red
-}
-
 .album-card {
     flex: 0 0 calc(50% - 0.5rem);
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-content: start;
 }
 
 .album-card img {
     width: 100%;
     height: auto;
-    border-radius: 5px;;
+    border-radius: 10px;
+}
+
+
+.album-info {
+    display: flex;
+    flex-direction: column;
+}
+.album-name {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.artist-name {
+    font-size: 0.75rem;
+    margin: 0;
+    color: rgb(100, 96, 96)
 }
