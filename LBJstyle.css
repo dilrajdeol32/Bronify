@@ -23,6 +23,16 @@ h1 {
     margin: 0px;
 }
 
+button {
+    /* strip all built-in styles */
+    -webkit-appearance: none;   /* iOS / Safari */
+    appearance: none;           /* modern spec   */
+    background: none;           /* kill default blue gradient */
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+  }
 
 button {
     background-color: green;
@@ -154,4 +164,15 @@ button:active {
     line-height: 1;
     color: inherit;
     padding: 6px 10px;
+  }
+
+
+  @media (min-width: 768px) {
+    .album-cover img {
+        max-width: 380px !important;             /* stop it from filling the whole screen  */
+        width: 100% !important;                      /* scale down fluidly up to 380 px        */
+        height: auto !important;                     /* keep aspect ratio                      */
+        margin: 0 auto !important;                   /* center if it’s block-level             */
+        object-fit: cover !important;   
+    }
   }
