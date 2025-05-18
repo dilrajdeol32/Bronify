@@ -14,7 +14,7 @@
         <p id = "album-tag">Album</p>
         <h1 id = "album-title">LBJ</h1>
         <p id = "artist">By Lebron James</p>
-        <p id = "num-of-songs">12 songs</p>
+        <p id = "num-of-songs">10 songs</p>
         <button id = "play" onclick="playAlbum()" >Play Album</button>
         <button id = "shuffle">Shuffle Play</button>
     </div>
@@ -27,16 +27,118 @@
         </div>
 
         <div class="tracks">
-            <div id="first">
-                <p class = "numbers">1</p>
+            <!-- Track 1 -->
+            <div class="track" data-src="audio/wacced out murals.mp3">
+                <p class="numbers">1</p>
                 <div class="song-info">
-                    <p class = "song-name" id = "track1">Track 1</p>
-                    <p class="song-artist">Lebron James</p>
+                    <p class="song-name">wacced out murals</p>
+                    <p class="song-artist">LeBron James</p>
                 </div>
-                <p class = "time">3:04</p>
+                <p class="time">5:16</p>
+            </div>
+        
+            <!-- Track 2 -->
+            <div class="track" data-src="audio/dribble up.mp3">
+                <p class="numbers">2</p>
+                <div class="song-info">
+                    <p class="song-name">dribble up</p>
+                    <p class="song-artist">LeBron James</p>
+                </div>
+                <p class="time">2:39</p>
+            </div>
+        
+            <!-- Track 3 -->
+            <div class="track" data-src="audio/hooper (w_ Caitlin Clark).mp3">
+                <p class="numbers">3</p>
+                <div class="song-info">
+                    <p class="song-name">hooper</p>
+                    <p class="song-artist">LeBron James</p>
+                </div>
+                <p class="time">2:58</p>
+            </div>
+        
+            <!-- Track 4 -->
+            <div class="track" data-src="audio/man at the garden.mp3">
+                <p class="numbers">4</p>
+                <div class="song-info">
+                    <p class="song-name">man at the garden</p>
+                    <p class="song-artist">LeBron James</p>
+                </div>
+                <p class="time">3:37</p>
+            </div>
+        
+            <!-- Track 5 -->
+            <div class="track" data-src="audio/hey now (Ft. Anthony Davis).mp3">
+                <p class="numbers">5</p>
+                <div class="song-info">
+                    <p class="song-name">hey now</p>
+                    <p class="song-artist">LeBron James</p>
+                </div>
+                <p class="time">3:38</p>
+            </div>
+        
+            <!-- Track 6 -->
+            <div class="track" data-src="audio/that's our ball ain't it.mp3">
+                <p class="numbers">6</p>
+                <div class="song-info">
+                    <p class="song-name">thats our ball ain't it</p>
+                    <p class="song-artist">LeBron James</p>
+                </div>
+                <p class="time">4:35</p>
+            </div>
+        
+            <!-- Track 7 -->
+            <div class="track" data-src="audio/tv off (Ft. James Harden) .mp3">
+                <p class="numbers">7</p>
+                <div class="song-info">
+                    <p class="song-name">tv off</p>
+                    <p class="song-artist">LeBron James</p>
+                </div>
+                <p class="time">4:10</p>
+            </div>
+        
+            <!-- Track 8 -->
+            <div class="track" data-src="aaudio/laker yellow (Ft. Justin Bieber, Jared McCain, Austin Reaves, Jeremy Lin, Nick Young).mp3">
+                <p class="numbers">8</p>
+                <div class="song-info">
+                    <p class="song-name">laker yellow</p>
+                    <p class="song-artist">LeBron James</p>
+                </div>
+                <p class="time">2:13</p>
+            </div>
+        
+            <!-- Track 9 -->
+            <div class="track" data-src="audio/peekaboo (Ft. Anthony Edwards) .mp3">
+                <p class="numbers">9</p>
+                <div class="song-info">
+                    <p class="song-name">peekaboo</p>
+                    <p class="song-artist">LeBron James</p>
+                </div>
+                <p class="time">2:36</p>
+            </div>
+        
+            <!-- Track 10 -->
+            <div class="track" data-src="audio/ring pt. 6.mp3">
+                <p class="numbers">10</p>
+                <div class="song-info">
+                    <p class="song-name">ring pt. 6</p>
+                    <p class="song-artist">LeBron James</p>
+                </div>
+                <p class="time">4:51</p>
             </div>
         </div>
     </div>
+    <div id="player-footer" class="footer hidden">
+        <img id="footer-cover" src="album_covers/gnx.jpg" alt="album cover" />
+        <div class="footer-info">
+          <p id="footer-song" class="footer-song-name">Song title</p>
+          <p id="footer-artist" class="footer-artist-name">Artist name</p>
+        </div>
+        <button id="footer-prev"  class="footer-nav-btn">⏮</button>
+        <button id="footer-pause" class="footer-pause-btn">❚❚</button>
+        <button id="footer-next"  class="footer-nav-btn">⏭</button>
+
+      </div>
 
     <audio id="audio-player" src="audio/lbj-track-01.mp3" preload="metadata"></audio>
 </body>
