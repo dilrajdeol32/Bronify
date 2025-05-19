@@ -8,15 +8,19 @@
     <script src="LBJscript.js"></script>
 </head>
 <body>
-    <img class = "album-cover" src="album_covers/gnx.jpg" alt="LBJ">
+    <div class="desktop-top">
+        <img class = "album-cover" src="album_covers/gnx.jpg" alt="LBJ">
 
-    <div class="info">
-        <p id = "album-tag">Album</p>
-        <h1 id = "album-title">LBJ</h1>
-        <p id = "artist">By Lebron James</p>
-        <p id = "num-of-songs">10 songs</p>
-        <button id = "play" onclick="playAlbum()" >Play Album</button>
-        <button id = "shuffle">Shuffle Play</button>
+        <div class="info">
+            <p id = "album-tag">Album</p>
+            <h1 id = "album-title">LBJ</h1>
+            <p id = "artist">By Lebron James</p>
+            <p id = "num-of-songs">10 songs</p>
+            <div class="buttons">
+                <button id = "play" onclick="playAlbum()" >Play Album</button>
+                <button id = "shuffle">Shuffle Play</button>
+            </div>
+        </div>
     </div>
 
     <div class="tracklist">
@@ -131,14 +135,44 @@
     <div id="player-footer" class="footer hidden">
         <img id="footer-cover" src="album_covers/gnx.jpg" alt="album cover" />
         <div class="footer-info">
-          <p id="footer-song" class="footer-song-name">Song title</p>
-          <p id="footer-artist" class="footer-artist-name">Artist name</p>
+            <p id="footer-song" class="footer-song-name">Song title</p>
+            <p id="footer-artist" class="footer-artist-name">Artist name</p>
         </div>
         <button id="footer-prev"  class="footer-nav-btn">⏮</button>
         <button id="footer-pause" class="footer-pause-btn">❚❚</button>
         <button id="footer-next"  class="footer-nav-btn">⏭</button>
+    </div>
 
-      </div>
+    
+    <div id="player-screen" class="player-screen hidden">
+        <div id="screen-grab" class="grab-bar"></div>
+    
+        <img id="screen-cover" src="album_covers/gnx.jpg" alt="cover">
+    
+        <div class="screen-info">
+        <p id="screen-song"   class="screen-song-name"></p>
+        <p id="screen-artist" class="screen-artist-name"></p>
+        </div>
+    
+        
+        <input type="range" id="seek-slider" min="0" max="100" value="0">
+        <div class="time-labels">
+        <span id="cur-time">0:00</span>
+        <span id="tot-time">0:00</span>
+        </div>
+    
+        
+        <div class="transport">
+        <button id="screen-prev">⏮</button>
+        <button id="screen-play">❚❚</button>
+        <button id="screen-next">⏭</button>
+        </div>
+    
+        <input type="range" id="vol-slider" min="0" max="1" step="0.01" value="1">
+    </div>
+  
+    
+
 
     <audio id="audio-player" src="audio/lbj-track-01.mp3" preload="metadata"></audio>
 </body>

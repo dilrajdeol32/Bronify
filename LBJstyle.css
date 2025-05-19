@@ -3,8 +3,9 @@ body {
     font-size: 16px;
 }
 
-img {
-    width: 100%;
+.album-cover {
+    padding-left: 29px;
+    width: 90%;
 }
 
 p {
@@ -24,10 +25,9 @@ h1 {
 }
 
 button {
-    /* strip all built-in styles */
-    -webkit-appearance: none;   /* iOS / Safari */
-    appearance: none;           /* modern spec   */
-    background: none;           /* kill default blue gradient */
+    -webkit-appearance: none;   
+    appearance: none;           
+    background: none;           
     border: none;
     padding: 0;
     font: inherit;
@@ -48,6 +48,11 @@ button {
 
 button:active {
     transform: scale(0.95);  
+}
+
+.buttons {
+    display: flex;
+    gap: 40px;
 }
 
 .heading {
@@ -86,6 +91,9 @@ button:active {
     font-size: 0.8rem;;
 }
 
+.tracklist {
+    padding-bottom: 90px;
+}
 
 .track {
     padding: 15px;
@@ -166,13 +174,96 @@ button:active {
     padding: 6px 10px;
   }
 
+  .player-screen{
+    position:fixed; 
+    inset:0; 
+    z-index:2000;
+    background:#08331a; 
+    display:flex; 
+    flex-direction:column;
+    align-items:center; 
+    padding:16px;
+    transform:translateY(100%); 
+    transition:transform .3s ease;
+  }
+
+  .player-screen.show {
+    transform:translateY(0)
+}
+  .player-screen.hidden {
+    display:none
+}        
+  
+  .grab-bar {
+    width:44px;
+    height:4px;
+    border-radius:2px;
+    background:#666;
+    margin-bottom:12px;
+    cursor:grab
+}
+  
+.player-screen img {
+    width:80%;
+    max-width:420px;
+    border-radius:8px
+}
+  
+.screen-info {
+    margin:16px 0;
+    text-align:center
+}
+.screen-song-name {
+    font-size:1.2rem;
+    font-weight:600;
+    margin:0
+}
+
+.screen-artist-name {
+    font-size:.9rem;
+    color:#aaa;
+    margin:0
+}
+
+#seek-slider,#vol-slider {
+    width:90%;
+    margin:12px 0
+}
+
+.time-labels {
+    width:90%;
+    display:flex;
+    justify-content:space-between;
+    font-size:.8rem;
+    color:#aaa
+}
+
+.transport {
+    display:flex;
+    gap:28px;
+    margin:12px 0
+}
+
+.transport button {
+    font-size:28px;
+    background:none;
+    border:none;
+    color:#fff
+}
+
 
   @media (min-width: 768px) {
-    .album-cover img {
-        max-width: 380px !important;             /* stop it from filling the whole screen  */
-        width: 100% !important;                      /* scale down fluidly up to 380 px        */
-        height: auto !important;                     /* keep aspect ratio                      */
-        margin: 0 auto !important;                   /* center if it’s block-level             */
-        object-fit: cover !important;   
+    .album-cover {
+        max-width: 500px;
     }
+
+    .desktop-top {
+        display: flex;
+        gap: 50px;
+    }
+
+    .player-screen img{
+        width:60%
+    }
+    
   }
